@@ -1,0 +1,17 @@
+# 내 PC에 PostgreSQL 띄우기:  docker compose up -d
+# 처음 만들어질 때 schema.sql 이 자동 실행된다. (테이블을 바꿨으면: docker compose down -v 후 다시 up)
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: anbu
+      POSTGRES_PASSWORD: anbu
+      POSTGRES_DB: anbu
+      TZ: Asia/Seoul
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:

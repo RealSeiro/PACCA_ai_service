@@ -1,0 +1,9 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+sqlalchemy>=2.0
+psycopg[binary]>=3.2
+pyjwt>=2.8
+apscheduler>=3.10,<4
+python-dotenv>=1.0
+httpx>=0.27          # scripts/demo.py 용
+firebase-admin>=6.5  # 실제 푸시를 보낼 때 필요 (없어도 서버는 돔)
