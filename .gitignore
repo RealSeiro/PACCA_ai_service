@@ -1,5 +1,28 @@
+# 비밀값 (절대 올리지 않음)
 .env
+*.env.local
+firebase-service-account*.json
+google-services.json
+
+# Python
 .venv/
+venv/
 __pycache__/
 *.pyc
-firebase-service-account*.json
+
+# Android / Gradle
+.gradle/
+build/
+local.properties
+*.iml
+.idea/
+captures/
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# OS · 에디터
+.DS_Store
+Thumbs.db
+.vscode/
